@@ -35,6 +35,13 @@ import { translationMessages } from './i18n';
 // Import CSS reset and Global Styles
 import './global-styles';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/css/animate.min.css";
+import "./assets/sass/light-bootstrap-dashboard.css?v=1.2.0";
+import "./assets/css/demo.css";
+import "./assets/css/pe-icon-7-stroke.css";
+
+
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
 const openSansObserver = new FontFaceObserver('Open Sans', {});
@@ -56,6 +63,7 @@ const render = messages => {
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
           <App />
+         
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,
@@ -83,7 +91,7 @@ if (!window.Intl) {
         import('intl/locale-data/jsonp/en.js'),
         import('intl/locale-data/jsonp/de.js'),
       ]),
-    )
+  )
     .then(() => render(translationMessages))
     .catch(err => {
       throw err;

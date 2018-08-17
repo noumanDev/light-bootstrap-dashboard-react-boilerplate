@@ -112,6 +112,7 @@ module.exports = options => ({
         },
       },
     ],
+   
   },
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({

@@ -1,3 +1,31 @@
+<p>
+integrating lightbootstrap admin with react-boilerplate
+    1. add package.json dependencies
+    2. copy files/folders
+        assests
+        commponents
+        layouts
+        routes
+        variables
+        views => containers
+    3. rename .jsx to .js
+    4. remove all .jsx extensions from imports
+    5. move layouts/dashboard/dashboard to containers/app/
+    5. add 'import styles' from index.js(lightbootstrap) to app.js(react boilerplate)
+        import "bootstrap/dist/css/bootstrap.min.css";
+        import "./assets/css/animate.min.css";
+        import "./assets/sass/light-bootstrap-dashboard.css?v=1.2.0";
+        import "./assets/css/demo.css";
+        import "./assets/css/pe-icon-7-stroke.css";
+    6. return following code to containers/app/index, other code will be commented
+        <Switch>
+        {indexRoutes.map((prop, key) => {
+        return <Route to={prop.path} component={prop.component} key={key} />;
+        })}
+        </Switch>
+</p>
+
+
 <img src="https://raw.githubusercontent.com/react-boilerplate/react-boilerplate-brand/master/assets/banner-metal-optimized.jpg" alt="react boilerplate banner" align="center" />
 
 <br />
